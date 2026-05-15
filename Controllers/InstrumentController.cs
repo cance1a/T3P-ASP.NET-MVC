@@ -52,7 +52,7 @@ namespace EmployeesManagement.Controllers
         // POST: Instruments/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("TipoInstrumento,NomeInstrumento,UsaCordas")] Instrument instrument)
+        public async Task<IActionResult> Create([Bind("InstrumentType,InstrumentName,UseRopes")] Instrument instrument)
         {
             instrument.CreatedById = "Cancela";
             instrument.CreatedOn = DateTime.Now;
@@ -85,7 +85,7 @@ namespace EmployeesManagement.Controllers
         // POST: Instruments/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,TipoInstrumento,NomeInstrumento,UsaCordas,CreatedById,CreatedOn,ModifiedById,ModifiedOn")] Instrument instrument)
+        public async Task<IActionResult> Edit(int id, [Bind("id,InstrumentType,InstrumentName,UseRopes,CreatedById,CreatedOn,ModifiedById,ModifiedOn")] Instrument instrument)
         {
             if (id != instrument.id)
             {
