@@ -18,27 +18,27 @@
             <div class="row">
                 <div class="col-md-6">
                 <div class="form-group">
-                    <label asp-for="TipoInstrumento" class="control-label"></label>
-                    <input asp-for="TipoInstrumento" class="form-control" />
-                    <span asp-validation-for="TipoInstrumento" class="text-danger"></span>
+                    <label asp-for="InstrumentType" class="control-label"></label>
+                    <input asp-for="InstrumentType" class="form-control" />
+                    <span asp-validation-for="InstrumentType" class="text-danger"></span>
                 </div>
                 </div>
                 <div class="col-md-6">
                 <div class="form-group">
-                    <label asp-for="NomeInstrumento" class="control-label"></label>
-                    <input asp-for="NomeInstrumento" class="form-control" />
-                    <span asp-validation-for="NomeInstrumento" class="text-danger"></span>
+                    <label asp-for="InstrumentName" class="control-label"></label>
+                    <input asp-for="InstrumentName" class="form-control" />
+                    <span asp-validation-for="InstrumentName" class="text-danger"></span>
                 </div>
                 </div>
                 <div class="col-md-6">
                 <div class="form-group">
                     <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" asp-for="UsaCordas">
-                        <label class="custom-control-label" asp-for="UsaCordas">
-                            Usa Cordas ?
+                        <input type="checkbox" class="custom-control-input" asp-for="UseRopes">
+                        <label class="custom-control-label" asp-for="UseRopes">
+                            Use Ropes ?
                         </label>
                     </div>
-                    <span asp-validation-for="UsaCordas" class="text-danger"></span>
+                    <span asp-validation-for="UseRopes" class="text-danger"></span>
                 </div>
                 </div>
             </div>

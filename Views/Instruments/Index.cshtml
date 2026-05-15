@@ -17,13 +17,13 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.TipoInstrumento)
+                @Html.DisplayNameFor(model => model.InstrumentType)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NomeInstrumento)
+                @Html.DisplayNameFor(model => model.InstrumentName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.UsaCordas)
+                @Html.DisplayNameFor(model => model.UseRopes)
             </th>
             <th>
                 Edit
@@ -40,13 +40,13 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.TipoInstrumento)
+                @Html.DisplayFor(modelItem => item.InstrumentType)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.NomeInstrumento)
+                @Html.DisplayFor(modelItem => item.InstrumentName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.UsaCordas)
+                @Html.DisplayFor(modelItem => item.UseRopes)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.id" class="btn btn-info btn-sm"><i class="fa fa-pen"></i></a>
