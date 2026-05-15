@@ -46,6 +46,7 @@ namespace EmployeesManagement.Controllers
         // GET: Employees/Create
         public IActionResult Create()
         {
+            ViewData["DepartmentList"] = new SelectList(Enum.GetValues(typeof(DepartmentType)));
             return View();
         }
 
@@ -65,9 +66,10 @@ namespace EmployeesManagement.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["DepartmentList"] = new SelectList(Enum.GetValues(typeof(DepartmentType)), employee.Department);
             return View(employee);
         }
-
+        
         // GET: Employees/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -81,6 +83,7 @@ namespace EmployeesManagement.Controllers
             {
                 return NotFound();
             }
+            ViewData["DepartmentList"] = new SelectList(Enum.GetValues(typeof(DepartmentType)), employee.Department);
             return View(employee);
         }
 
@@ -100,6 +103,8 @@ namespace EmployeesManagement.Controllers
             {
                 try
                 {
+                    employee.ModifiedById = "Cancela";
+                    employee.ModifiedOn = DateTime.Now;
                     _context.Update(employee);
                     await _context.SaveChangesAsync();
                 }
@@ -116,6 +121,7 @@ namespace EmployeesManagement.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["DepartmentList"] = new SelectList(Enum.GetValues(typeof(DepartmentType)), employee.Department);
             return View(employee);
         }
 
@@ -158,3 +164,4 @@ namespace EmployeesManagement.Controllers
         }
     }
 }
+

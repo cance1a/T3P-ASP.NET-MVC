@@ -13,5 +13,6 @@ namespace EmployeesManagement.Data
         }
         
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Instrument> Instruments { get; set; }
     }
 }
