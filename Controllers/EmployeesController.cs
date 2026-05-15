@@ -103,8 +103,6 @@ namespace EmployeesManagement.Controllers
             {
                 try
                 {
-                    employee.ModifiedById = "Cancela";
-                    employee.ModifiedOn = DateTime.Now;
                     _context.Update(employee);
                     await _context.SaveChangesAsync();
                 }
