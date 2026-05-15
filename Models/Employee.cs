@@ -1,5 +1,12 @@
 ﻿namespace EmployeesManagement.Models
 {
+    public enum DepartmentType
+    {
+        Administration,
+        Engineer,
+        Worker
+    }
+
     public class Employee: UserActivity
     {
         public int id { get; set; }
@@ -24,8 +31,10 @@
 
         public string Adress { get; set; }
 
-        public string Department { get; set; }
+        public DepartmentType Department { get; set; }
 
         public string Designation { get; set; }
     }
 }
+
+
